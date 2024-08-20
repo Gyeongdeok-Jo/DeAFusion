@@ -19,7 +19,7 @@ Our code was written by applying BiSeNet and the Fusion model from U2Fusion's De
 - [ ] albumentations==1.4.14
 
 ## Dataset
-The training data and testing data is from the [[WMH Segmentation Challenge 2017]](https://wmh.isi.uu.nl).
+The training data and testing data is from the [WMH Segmentation Challenge 2017](https://wmh.isi.uu.nl).
 
 
 ## Training and Inference
