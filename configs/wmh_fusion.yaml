@@ -1,0 +1,80 @@
+#### general settings
+model : 'Fusion'
+phase : 'train'
+epochs : 10
+pretrained : True     #Pre-trained DenseNet from U2Fusion https://github.com/ytZhang99/U2Fusion-pytorch/tree/master/model/model.pth
+distributed : False 
+gpu_ids : [1]
+grayscale : True
+dilation : 3
+alpha : 10
+
+loss_type : 
+  Fusion_loss : 
+    which_loss : Fusion_loss
+    setting : 
+      lamb1 : 0.5 #SSIM 
+      lamb2 : 5 #MSE
+      lamb3 : 5 #Grad MSE
+      grayscale : True
+
+
+  Seg_loss : 
+    which_loss : Diceloss
+    setting :
+      include_background : True
+      sigmoid : True
+
+lr : !!float 5e-5
+train:
+  optimizers:
+    default:
+      type: Adam
+      lr: !!float 5e-5
+    netFusion: 
+      type: Adam
+      lr: !!float 5e-5
+    # netSR: ~
+    netSeg: 
+      type: Adam
+      lr: !!float 5e-4
+    # netD2: ~
+
+dataset:
+  batch_size : 16
+  modality:
+    src1: 'T1'
+    src2: 'FLAIR'
+    label : 'WMH_Seg'
+    mask : 'WMH_mask'
+
+  train:
+    root : '../Dataset/train'
+
+  val:
+    root : '../Dataset/val'
+
+  test:
+    root : '../Dataset/test'
+
+
+#### network structures
+networks:
+  netFusion:
+    which_network: DenseNet
+    setting:
+      in_channels: 2
+      out_channels: 1
+      num_features: 44
+      growth: 44
+      num_layers : 5
+
+  netSeg:
+    which_network : BiSeNet
+    setting:
+      n_classes: 1
+
+log_dir : 'wmh_fusion'
+path:
+  resume_state :  './wmh_fusion/checkpoints/I18_E9'
+  save_dir : './wmh_fusion/results'
