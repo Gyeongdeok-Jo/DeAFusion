@@ -32,7 +32,7 @@ The training data and testing data is from the [WMH Segmentation Challenge 2017]
 ```
 python train.py -p ./configs/wmh_fusion.yaml
 ```
-4. To test, set the phase to 'val' in the configuration file, then run the follwoing code:
+4. To test, set the phase to `val` in the configuration file, then run the follwoing code:
 ```
 python run_fusion.py -p ./configs/wmh_fusion.yaml
 ```
