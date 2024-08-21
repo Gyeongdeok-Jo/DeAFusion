@@ -28,11 +28,11 @@ The training data and testing data is from the [WMH Segmentation Challenge 2017]
 
 2. Place the T1, FLAIR, WM mask, and WMH Ground Truth images in the directories specified by `dataset.train.root`, `dataset.val.root`, and `dataset.test.root` in the configuration file under respective `src1`, `src2`, `label`, and `mask` images.
 
-> 3. Set the phase to `train`, in the configuration file, then run the following code:
+3. Set the phase to `train`, in the configuration file, then run the following code:
 ```
 python train.py -p ./configs/wmh_fusion.yaml
 ```
-> 4. To test, set the phase to `val` in the configuration file, then run the follwoing code:
+4. To test, set the phase to `val` in the configuration file, then run the follwoing code:
 ```
 python run_fusion.py -p ./configs/wmh_fusion.yaml
 ```
