@@ -3,7 +3,7 @@
 This is official Pytorch implementation of **DeAFusion: Detail-Aware Image Fusion for Whitematter Hyperintensity Segmentation**.
 
 ## Framework
-![framework](./assets/framework.jpg)
+![framework](./assets/framework.png)
 
 Our code was written by applying BiSeNet and the Fusion model from U2Fusion's DenseNet. We would like to thank those who have shared their code. Thanks to everyone who contributed code and models.
 
@@ -44,10 +44,10 @@ tensorboard --logdir=wmh_fusion
 ```
 
 ## Fusion Example
-![fusion_example](./assets/fusion_example.jpg)
+![fusion_example](./assets/fusion_example.png)
 
 ## Segmentation Example
-![fusion_example](./assets/segmentation_example.jpg)
+![fusion_example](./assets/segmentation_example.png)
 <!-- 
 ## Citation
 The following paper might be cited:
