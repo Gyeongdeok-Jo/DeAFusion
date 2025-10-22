@@ -52,7 +52,7 @@ tensorboard --logdir=wmh_fusion
 ## Citation
 If you use this code for your research, please cite our papers.
 
-### BibTeX:
+**BibTeX**:
 ```
 @inproceedings{jo2024deafusion,
   title={DeAFusion: Detail-Aware Image Fusion for Whitematter Hyperintensity Segmentation},
