@@ -48,15 +48,18 @@ tensorboard --logdir=wmh_fusion
 
 ## Segmentation Example
 ![fusion_example](./assets/segmentation_example.png)
-<!-- 
+
 ## Citation
-The following paper might be cited:
+If you use this code for your research, please cite our papers.
+
+### BibTeX:
 ```
-@article{xu2020u2fusion,
-  title={U2Fusion: A unified unsupervised image fusion network},
-  author={Xu, Han and Ma, Jiayi and Jiang, Junjun and Guo, Xiaojie and Ling, Haibin},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2020},
-  publisher={IEEE}
+@inproceedings{jo2024deafusion,
+  title={DeAFusion: Detail-Aware Image Fusion for Whitematter Hyperintensity Segmentation},
+  author={Jo, Gyeongdeok and Kim, Jonghun and Park, Bo-Yong and Park, Hyunjin},
+  booktitle={2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  pages={3361--3366},
+  year={2024},
+  organization={IEEE}
 }
-``` -->
+```
